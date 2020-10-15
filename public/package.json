@@ -1,0 +1,10 @@
+{
+    "name": "webapp",
+    "version": "1.0.0",
+    "description": "WebApp dependencies",
+    "dependencies": {
+        "jquery": "^3.5.1"
+    },
+    "author": "Martin J. Wolf",
+    "license": "THE_YOU_HAVE_TOTAL_FREEDOM_LICENSE"
+}

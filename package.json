@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "A basic NodeJS webserver template",
     "scripts": {
+        "postinstall": "cd public && npm i",
         "start": "live-server --host=localhost --port=8000 public"
     },
     "main": "server.js",
