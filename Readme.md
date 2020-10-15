@@ -5,7 +5,7 @@
 Install Live-Server globally:
 `$ npm i -g live-server`
 
-Install dependancies:
+Install dependencies:
 `$ npm i`
 
 ### Usage
