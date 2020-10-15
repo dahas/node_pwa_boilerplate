@@ -1,7 +1,7 @@
 {
-    "name": "basic_webserver_template",
+    "name": "basic_webserver_boilerplate",
     "version": "1.0.0",
-    "description": "A basic NodeJS webserver template",
+    "description": "A basic NodeJS webserver boilerplate",
     "scripts": {
         "postinstall": "cd public && npm i",
         "serve": "live-server --host=localhost --port=8000 public",

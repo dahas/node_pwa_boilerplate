@@ -4,7 +4,8 @@
     "description": "WebApp dependencies",
     "dependencies": {
         "bootstrap": "^4.5.3",
-        "jquery": "^3.5.1"
+        "jquery": "^3.5.1",
+        "popper.js": "1.16.0"
     },
     "author": "Martin J. Wolf",
     "license": "THE_YOU_HAVE_TOTAL_FREEDOM_LICENSE"

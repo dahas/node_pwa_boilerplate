@@ -1,24 +1,38 @@
-## NodeJS Webserver Template
+## NodeJS Webserver Boilerplate
+
+This boilerplate for NodeJS makes it easy to start a new WebApp from scratch. It includes jQuery and Bootstrap.
 
 ### Requirements
 
-You have to run the following commands only once after you have cloned the resources from GitHub:
+Clone the resources into an empty folder:
+```
+$ mkdir your_project_folder
+$ cd your_project_folder
+$ git clone https://github.com/dahas/node_webserver_template.git .
+```
 
-Install Live-Server globally:
-`$ npm i -g live-server`
+Install a live server and SASS support globally:
 
-Install SASS globally:
-`$ npm i -g node-sass`
+```
+$ npm i -g live-server
+$ npm i -g node-sass
+```
 
-Install default project dependencies:
-`$ npm i`
+Install the dependent libraries:
+```
+$ npm i
+```
 
 ### Usage
 
-Run this command everytime you start working on the project:
+Run this command to you start working on your project. It launches the web browser and reloads it everytime a file changes:
 
-`$ npm run dev`
+```
+$ npm run dev
+```
 
 Run this command to simply start the server:
 
-`$ npm start`
+```
+$ npm start
+```
