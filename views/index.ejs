@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -19,19 +20,24 @@
   <link href="assets/css/styles.css" rel="stylesheet">
 
 </head>
-<body>
-  <!-- EJS: This is how you set a marker. The replacement is done in app.js -->
-  <h1 class="text-success"><%=complete %></h1>
 
-  <!-- EJS: This is how you include a partial -->
-  <%- include('partials/learn_more') -%>
+<body>
+  <div class="jumbotron">
+    <!-- EJS: This is how you set a marker. The replacement is done in app.js -->
+    <h1 class="display-4"><%=complete %></h1>
+    <p class="lead">Start by editing this page. You´ll find it in the "views" folder (index.ejs).</p>
+    <hr class="my-4">
+    <!-- EJS: This is how you include a partial -->
+    <%- include('partials/learn_more') -%>
+  </div>
 
   <!-- jQuery, Popper, Bootstrap. Order matters! -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  
+
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
