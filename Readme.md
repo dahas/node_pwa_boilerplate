@@ -25,7 +25,7 @@ $ npm i
 
 ### Usage
 
-Run this command to you start working on your project. It launches the web browser and reloads it everytime a file changes:
+Run this command when you start working on your project. It launches the web browser and reloads it automatically everytime a file changes:
 
 ```
 $ npm run dev
