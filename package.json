@@ -4,9 +4,8 @@
     "description": "A basic NodeJS webserver boilerplate",
     "scripts": {
         "postinstall": "cd public && npm i",
-        "serve": "live-server --host=localhost --port=8000 public",
         "watch": "sass --watch public/sass/styles.scss:public/assets/css/styles.css",
-        "dev": "concurrently --kill-others \"npm run watch\" \"npm run serve\"",
+        "dev": "concurrently --kill-others \"npm run watch\" \"node server\"",
         "start": "node server.js"
     },
     "main": "server.js",

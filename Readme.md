@@ -11,10 +11,9 @@ $ cd your_project_folder
 $ git clone https://github.com/dahas/node_webserver_boilerplate.git .
 ```
 
-Install a live server and SASS support globally:
+Install SASS support globally:
 
 ```
-$ npm i -g live-server
 $ npm i -g node-sass
 ```
 
@@ -25,14 +24,17 @@ $ npm i
 
 ### Usage
 
-Run this command when you start working on your project. It launches the web browser and reloads it automatically everytime a file changes:
+Run this command when you start working on your project (enables SASS watcher):
 
 ```
 $ npm run dev
 ```
 
-Run this command to simply start the server:
+Run this command to simply start serving:
 
 ```
 $ npm start
 ```
+
+To launch your project in the web browser enter:
+**http://localhost:8000**
