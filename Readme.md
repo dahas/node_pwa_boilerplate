@@ -8,7 +8,7 @@ Clone the resources into an empty folder:
 ```
 $ mkdir your_project_folder
 $ cd your_project_folder
-$ git clone https://github.com/dahas/node_webserver_template.git .
+$ git clone https://github.com/dahas/node_webserver_boilerplate.git .
 ```
 
 Install a live server and SASS support globally:
