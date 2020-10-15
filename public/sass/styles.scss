@@ -4,23 +4,17 @@
  |    to apply modifications.                                            |
  +-----------------------------------------------------------------------*/
 
-// Apply the SASS watcher by running the following command in the command line from the root directory:
-// $ sass --watch public/sass/styles.scss:public/assets/css/styles.css
-
-
 // Bootstrap
 @import "customVariables"; // 1st
 @import "../node_modules/bootstrap/scss/bootstrap";  // 2nd
 @import "customMixins"; // 3rd
 @import "customStyles"; // 4th
 
-
 // Font-Awesome
 @import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-
 
 // Fonts
 @import "customFonts";
