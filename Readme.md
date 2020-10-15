@@ -11,6 +11,12 @@ $ cd your_project_folder
 $ git clone https://github.com/dahas/node_webserver_boilerplate.git .
 ```
 
+Install Node monitor globally:
+
+```
+$ npm i -g nodemon
+```
+
 Install SASS support globally:
 
 ```
