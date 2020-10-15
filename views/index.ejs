@@ -20,7 +20,11 @@
 
 </head>
 <body>
-  <span class="text-success">You are ready to go!</span>
+  <!-- EJS: This is how you set a marker. The replacement is done in app.js -->
+  <h1 class="text-success"><%=complete %></h1>
+
+  <!-- EJS: This is how you include a partial -->
+  <%- include('partials/learn_more') -%>
 
   <!-- jQuery, Popper, Bootstrap. Order matters! -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>

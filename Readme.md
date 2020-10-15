@@ -1,6 +1,6 @@
 ## NodeJS Webserver Boilerplate
 
-This boilerplate for NodeJS makes it easy to start a new WebApp from scratch. It includes jQuery and Bootstrap.
+This boilerplate for NodeJS makes it easy to start a new Bootstrap WebApp from scratch. It is based upon the Express framework and the EJS template engine.
 
 ### Requirements
 
