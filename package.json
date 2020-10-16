@@ -5,8 +5,8 @@
     "scripts": {
         "postinstall": "cd public && npm i",
         "watch": "sass --watch public/sass/styles.scss:public/assets/css/styles.css",
-        "dev": "concurrently --kill-others \"npm run watch\" \"node server\"",
-        "start": "node server.js"
+        "dev": "concurrently --kill-others \"npm run watch\" \"nodemon server\"",
+        "start": "nodemon server.js"
     },
     "main": "server.js",
     "dependencies": {
