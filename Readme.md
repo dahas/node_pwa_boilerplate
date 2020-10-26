@@ -32,7 +32,7 @@ Run this command when you start working on your project. It enables the SASS wat
 $ npm run dev
 ```
 
-Before you deploy your stuff to hosting provider run the following command. It compresses your JavaScript:
+Before you deploy your stuff to a hosting provider run the following command. It compresses your JavaScript:
 
 ```
 $ npm run build
