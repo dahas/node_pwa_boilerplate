@@ -11,11 +11,11 @@
 @import "customStyles"; // 4th
 
 // Font-Awesome
-@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../public/node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../public/node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../public/node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../public/node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 
 // Fonts
 @import "customFonts";
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+// @import url('https://fonts.googleapis.com/css?family=Poppins');

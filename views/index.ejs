@@ -18,26 +18,22 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/styles.css" rel="stylesheet">
-
 </head>
 
 <body>
   <div class="jumbotron">
     <!-- EJS: This is how you set a marker. The replacement is done in app.js -->
     <h1 class="display-4"><%=complete %></h1>
-    <p class="lead">Start by editing this page. You´ll find it in the "views" folder (index.ejs).</p>
+    <p class="lead">Start by editing this page. You´ll find it in the "views" folder (index.ejs). To add some functionality check out the main.js file in the "src" folder.</p>
     <hr class="my-4">
     <!-- EJS: This is how you include a partial -->
     <%- include('partials/learn_more') -%>
   </div>
 
-  <!-- jQuery, Popper, Bootstrap. Order matters! -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <button type="button" class="btn btn-sm btn-dark" data-toggle="popover" title="Popover title"
+    data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 
 </html>

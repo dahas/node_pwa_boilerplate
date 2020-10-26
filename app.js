@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({
 
 app.set('view engine', 'ejs');
 
+// ---- Set your routes below ----
+
 app.get('/', function (req, res) {
     res.render('index', { // SET TEMPLATE
         complete: "Well done! You are ready to go!"
