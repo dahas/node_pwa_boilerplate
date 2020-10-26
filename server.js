@@ -1,3 +1,4 @@
 var app = require("./app");
-app.listen(8000);
-console.log("Server is running on http://localhost:8000");
+var port = process.env.PORT || 8000;
+app.listen(port);
+console.log("Server is running on http://localhost:" + port);
