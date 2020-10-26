@@ -4,10 +4,10 @@
     "description": "A basic NodeJS webserver boilerplate",
     "scripts": {
         "postinstall": "cd public && npm i",
-        "build": "browserify src/main.js -o public/assets/js/main.js",
         "watch": "watchify src/main.js -o public/assets/js/main.js -v",
         "sass": "sass --watch sass/styles.scss:public/assets/css/styles.css",
         "dev": "concurrently --kill-others \"npm run sass\" \"npm run watch\" \"node server\"",
+        "build": "uglifyjs public/assets/js/main.js --compress --mangle --output public/assets/js/main.js",
         "start": "node server"
     },
     "browserify": {
@@ -44,6 +44,7 @@
         "@babel/core": "^7.12.3",
         "@babel/preset-env": "^7.12.1",
         "babelify": "^10.0.0",
-        "concurrently": "^5.3.0"
+        "concurrently": "^5.3.0",
+        "uglify-js": "^3.11.4"
     }
 }
