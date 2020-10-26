@@ -67,4 +67,4 @@ Routes are configured in app.js using the express framework.
 
 ### Use another CSS framework
 
-Instead of bootstrap you can install any other css framework that you prefer. If the other framework supports scss as well open styles.scss which you find in the "sass" folder. Replace the 2nd line in the Bootstrap section so it points to the scss file of the new library. 
+Instead of bootstrap you can install any other css framework that you prefer. If the other framework supports scss as well open styles.scss which you find in the "sass" folder. Replace the 2nd line in the Bootstrap section so it points to the main scss file of the new library. 
