@@ -43,7 +43,7 @@ To launch your project in the web browser enter:
 
 ##### HTML
 
-You find the HTML files in the "views" folder. If you like to break your layout into pieces, put those pieces in the "partials" subfolder. Markers and partials are parsed with the EJS template engine.
+You find the HTML files in the "views" folder. Don´t let the file extension "ejs" confuse you. If you like to break your layout into pieces, put those pieces in the "partials" subfolder. Markers and partials are parsed with the EJS template engine.
 
 ##### CSS
 
