@@ -8,7 +8,8 @@
         "sass": "sass --watch sass/styles.scss:public/assets/css/styles.css",
         "dev": "concurrently --kill-others \"npm run sass\" \"npm run watch\" \"node server\"",
         "build": "uglifyjs public/assets/js/main.js --compress --mangle --output public/assets/js/main.js",
-        "start": "node server"
+        "start": "node server",
+        "deploy": "git push heroku master"
     },
     "browserify": {
         "transform": [
