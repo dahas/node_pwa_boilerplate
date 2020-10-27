@@ -24,14 +24,18 @@
   <div class="jumbotron">
     <!-- EJS: This is how you set a marker. The replacement is done in app.js -->
     <h1 class="display-4"><%=complete %></h1>
-    <p class="lead">Start by editing this page. You´ll find it in the "views" folder (index.ejs). To add some functionality check out the main.js file in the "src" folder.</p>
+    <p class="lead">Start by editing this page. You´ll find it in the "views" folder (index.ejs). To add some
+      functionality check out the main.js file in the "src" folder.</p>
     <hr class="my-4">
     <!-- EJS: This is how you include a partial -->
     <%- include('partials/learn_more') -%>
   </div>
 
-  <button type="button" class="btn btn-sm btn-dark" data-toggle="popover" title="Popover title"
-    data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+  <button type="button" class="btn btn-sm btn-dark mr-2" data-toggle="popover"
+    title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle
+    popover</button>
+
+  <button id="alert" type="button" onmouseup="showAlert();" class="btn btn-sm btn-outline-dark">Click to show an alert.</button>
 
   <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
