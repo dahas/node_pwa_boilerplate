@@ -17941,8 +17941,8 @@ $(function () {
   window.showAlert = function () {
     alert("OK!");
   };
-  /* To avoid the above behaviour you better 
-     attach events like shown below: */
+  /* To avoid making handler global you better 
+     attach them like shown below: */
   // $('#alert').on('mouseup', () => {
   //     alert("OK!");
   // });
