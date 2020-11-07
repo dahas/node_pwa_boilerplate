@@ -1,4 +1,4 @@
-require(("./register.js"))
+require("./register.js")
 
 $(() => {
     // ---- Add your stuff below ----
