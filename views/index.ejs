@@ -10,11 +10,15 @@
   <meta name="keywords" content="Add keywords here">
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="favicon.ico">
-  <link href="assets/img/favicon_extra/favicon.png" rel="icon">
-  <link href="assets/img/favicon_extra/apple-touch-icon.png" rel="apple-touch-icon">
-  <meta name="msapplication-TileImage" content="assets/img/favicon_extra/mstile-144x144.png">
-  <meta name="msapplication-TileColor" content="#00aba9">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
 
   <!-- Main CSS File -->
   <link href="assets/css/styles.css" rel="stylesheet">
@@ -31,11 +35,12 @@
     <%- include('partials/learn_more') -%>
   </div>
 
-  <button type="button" class="btn btn-sm btn-dark mr-2" data-toggle="popover"
-    title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle
+  <button type="button" class="btn btn-sm btn-dark mr-2" data-toggle="popover" title="Popover title"
+    data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle
     popover</button>
 
-  <button id="alert" type="button" onmouseup="showAlert();" class="btn btn-sm btn-outline-dark">Click to show an alert.</button>
+  <button id="alert" type="button" onmouseup="showAlert();" class="btn btn-sm btn-outline-dark">Click to show an
+    alert.</button>
 
   <script type="text/javascript" src="assets/js/main.js"></script>
 </body>

@@ -63,8 +63,12 @@ The main Javascript file is within the "src" folder. You can write your code and
 
 ##### Routing
 
-Routes are configured in app.js using the express framework.
+Routes are configured in app.js using the express framework. 
+
+### Create icons and a manifest
+
+Visit [realfavicongenerator.net](https://realfavicongenerator.net). Follow the instructions and replace the related files in the public folder with those from the zip file.
 
 ### Use another CSS framework
 
-Instead of bootstrap you can install any other css framework that you prefer. If the other framework supports scss as well open styles.scss which you find in the "sass" folder. Replace the 2nd line in the Bootstrap section so it points to the main scss file of the new library. 
+Instead of bootstrap you can install any other css framework that you prefer. If the other framework supports scss as well open styles.scss which you find in the "sass" folder. Replace the 2nd line in the Bootstrap section so it points to the main scss file of the new library. Also remove bootstrap from the main.js file.
