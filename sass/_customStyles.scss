@@ -5,3 +5,7 @@
 body {
     padding: 2rem;
 }
+
+@media all and (max-width:480px) {
+    .btn-block-xs { width: 100%; display:block; }
+ }  

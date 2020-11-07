@@ -9913,6 +9913,12 @@ body {
   padding: 2rem;
 }
 
+@media all and (max-width: 480px) {
+  .btn-block-xs {
+    width: 100%;
+    display: block;
+  }
+}
 /*!
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

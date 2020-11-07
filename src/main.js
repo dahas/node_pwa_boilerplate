@@ -1,7 +1,4 @@
-// jQuery, Popper, Bootstrap. Order matters!
-window.$ = window.jQuery = require('jquery');
-require('popper.js');
-require('bootstrap');
+require(("./register.js"))
 
 $(() => {
     // ---- Add your stuff below ----

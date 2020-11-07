@@ -17923,12 +17923,7 @@ return Popper;
 },{}],4:[function(require,module,exports){
 "use strict";
 
-// jQuery, Popper, Bootstrap. Order matters!
-window.$ = window.jQuery = require('jquery');
-
-require('popper.js');
-
-require('bootstrap');
+require("./register.js");
 
 $(function () {
   // ---- Add your stuff below ----
@@ -17948,5 +17943,25 @@ $(function () {
   // });
 
 });
+
+},{"./register.js":5}],5:[function(require,module,exports){
+"use strict";
+
+// jQuery, Popper, Bootstrap. Order matters!
+window.$ = window.jQuery = require('jquery');
+
+require('popper.js');
+
+require('bootstrap');
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function (err) {
+      return console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
 
 },{"bootstrap":1,"jquery":2,"popper.js":3}]},{},[4]);
