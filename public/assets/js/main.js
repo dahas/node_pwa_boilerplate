@@ -17989,15 +17989,10 @@ $(function () {
   window.showAlert = function () {
     alert("OK!");
   };
-  /* To avoid making handler global you better 
-     attach them like shown below: */
 
-
-  $('a.btn-lg').on('mouseup', function () {
-    console.log(navigator.onLine);
-
+  $('a.btn-lg').on('mouseup', function (e) {
     if (navigator.onLine) {
-      location.href = $('a.btn-lg').data('href');
+      location.href = $(e.currentTarget).data('href');
     } else {
       alert("Sorry! No internet :-(");
     }
@@ -18007,17 +18002,17 @@ $(function () {
 },{"./register.js":6}],6:[function(require,module,exports){
 "use strict";
 
+var _package = require("../package.json");
+
 require("popper.js");
 
 require("bootstrap");
-
-var _package = require("../package.json");
 
 // jQuery, Popper, Bootstrap. Order matters!
 window.$ = window.jQuery = require('jquery'); // Uncomment the section below to enable the service-worker.
 // if ('serviceWorker' in navigator) {
 //     window.addEventListener('load', () => {
-//         navigator.serviceWorker.register('/service-worker.js?ver=' + version)
+//         navigator.serviceWorker.register('/service-worker.js?ver=' + appVersion)
 //     });
 // }
 
