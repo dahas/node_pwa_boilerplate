@@ -75,7 +75,7 @@ Visit [realfavicongenerator.net](https://realfavicongenerator.net). Follow the i
 
 ### Use another CSS framework
 
-Instead of bootstrap you can install any other css framework that you prefer. If the other framework supports scss as well open styles.scss which you find in the "sass" folder. Replace the 2nd line in the Bootstrap section so it points to the main scss file of the new library. Also remove bootstrap from the main.js file.
+Instead of bootstrap you can install any other css framework that you prefer. If the other framework supports scss as well open styles.scss which you find in the "sass" folder. Replace the 2nd line in the Bootstrap section so it points to the main scss file of the new library. Also remove bootstrap from register.js in "src" folder.
 
 ### Enable offline usage
 
