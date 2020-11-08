@@ -79,4 +79,4 @@ Instead of bootstrap you can install any other css framework that you prefer. If
 
 ### Enable offline usage
 
-The nice thing about a PWA is that you can use it offline like any other native app. But you have to cache all the files you need in a special way. You can do this with a so-called ServiceWorker. You can activate the ServiceWorker in "src/register.js". The ServiceWorker file containing the caching functions is located in the "public" folder.
+The nice thing about a PWA is that you can use it offline like any other native app. But you have to cache all the files you need in a special way. You can do this with a so-called ServiceWorker. You can activate the ServiceWorker in "src/register.js" by uncommenting the relevant code. The ServiceWorker file containing the caching functions is located in the "public" folder.
