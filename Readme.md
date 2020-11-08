@@ -10,7 +10,7 @@ Clone the resources into an empty folder:
 ```
 $ mkdir your_project_folder
 $ cd your_project_folder
-$ git clone https://github.com/dahas/node_webapp_boilerplate.git .
+$ git clone https://github.com/dahas/node_pwa_boilerplate.git .
 ```
 
 Install SASS support globally:
