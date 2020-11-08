@@ -18014,13 +18014,11 @@ require("bootstrap");
 var _package = require("../package.json");
 
 // jQuery, Popper, Bootstrap. Order matters!
-window.$ = window.jQuery = require('jquery');
-console.log(_package.version);
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/service-worker.js?ver=' + _package.version);
-  });
-}
+window.$ = window.jQuery = require('jquery'); // Uncomment the section below to enable the service-worker.
+// if ('serviceWorker' in navigator) {
+//     window.addEventListener('load', () => {
+//         navigator.serviceWorker.register('/service-worker.js?ver=' + version)
+//     });
+// }
 
 },{"../package.json":4,"bootstrap":1,"jquery":2,"popper.js":3}]},{},[5]);

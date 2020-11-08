@@ -4,10 +4,10 @@ import 'popper.js';
 import 'bootstrap';
 import{ version } from '../package.json';
 
-console.log(version);
+// Uncomment the section below to enable the service-worker.
 
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js?ver=' + version)
-    });
-}
+// if ('serviceWorker' in navigator) {
+//     window.addEventListener('load', () => {
+//         navigator.serviceWorker.register('/service-worker.js?ver=' + version)
+//     });
+// }
