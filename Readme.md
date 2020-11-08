@@ -71,7 +71,7 @@ Routes are configured in app.js using the express framework.
 
 ### Create icons and a manifest
 
-Visit [realfavicongenerator.net](https://realfavicongenerator.net). Follow the instructions and replace the related images in the public folder with those from the zip file. Ignore the included manifest.
+Visit [realfavicongenerator.net](https://realfavicongenerator.net). Follow the instructions and replace the related images in the public folder with those from the zip file. Ignore the included manifest. Change the name of your app in 'manifest.json'.
 
 ### Use another CSS framework
 
