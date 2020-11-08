@@ -1,10 +1,5 @@
 {
-    "name": "webapp",
-    "version": "1.0.0",
-    "description": "WebApp dependencies",
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.1"
-    },
-    "author": "Martin J. Wolf",
-    "license": "THE_YOU_HAVE_TOTAL_FREEDOM_LICENSE"
+    }
 }
