@@ -1,4 +1,5 @@
-var CACHE_NAME = 'dhs-cache-v1';
+var CACHE_NAME = 'pwa-cache';
+
 var urlsToCache = [
     '/',
     '/assets/css/styles.css',
@@ -18,7 +19,7 @@ var urlsToCache = [
     '/android-chrome-512x512.png',
     '/apple-touch-icon.png',
     '/mstile-150x150.png',
-    'safari-pinned-tab.svg'
+    '/safari-pinned-tab.svg'
 ];
 
 self.addEventListener('install', function (event) {
@@ -41,4 +42,3 @@ self.addEventListener('fetch', function (event) {
             })
     );
 });
-

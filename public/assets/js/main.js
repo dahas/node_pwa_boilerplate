@@ -17921,6 +17921,59 @@ return Popper;
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],4:[function(require,module,exports){
+module.exports={
+    "name": "basic_webserver_boilerplate",
+    "version": "1.0.0",
+    "description": "A basic NodeJS webserver boilerplate",
+    "scripts": {
+        "postinstall": "cd public && npm i",
+        "watch": "watchify src/main.js -o public/assets/js/main.js -v",
+        "sass": "sass --watch sass/styles.scss:public/assets/css/styles.css",
+        "dev": "concurrently --kill-others \"npm run sass\" \"npm run watch\" \"node server\"",
+        "build": "uglifyjs public/assets/js/main.js --compress --mangle --output public/assets/js/main.js",
+        "start": "node server",
+        "deploy": "git push heroku master"
+    },
+    "browserify": {
+        "transform": [
+            [
+                "babelify",
+                {
+                    "presets": [
+                        "@babel/preset-env"
+                    ]
+                }
+            ]
+        ]
+    },
+    "main": "server.js",
+    "dependencies": {
+        "body-parser": "^1.15.0",
+        "bootstrap": "^4.5.3",
+        "browserify": "^17.0.0",
+        "compression": "^1.0.11",
+        "cookie-parser": "^1.4.1",
+        "ejs": "^3.1.5",
+        "express": "^4.13.4",
+        "jquery": "^3.5.1",
+        "longjohn": "^0.2.11",
+        "method-override": "^2.3.5",
+        "morgan": "^1.3.0",
+        "popper.js": "1.16.1-lts",
+        "watchify": "^3.11.1"
+    },
+    "author": "Martin J. Wolf",
+    "license": "THE_YOU_HAVE_TOTAL_FREEDOM_LICENSE",
+    "devDependencies": {
+        "@babel/core": "^7.12.3",
+        "@babel/preset-env": "^7.12.1",
+        "babelify": "^10.0.0",
+        "concurrently": "^5.3.0",
+        "uglify-js": "^3.11.4"
+    }
+}
+
+},{}],5:[function(require,module,exports){
 "use strict";
 
 require("./register.js");
@@ -17938,30 +17991,36 @@ $(function () {
   };
   /* To avoid making handler global you better 
      attach them like shown below: */
-  // $('#alert').on('mouseup', () => {
-  //     alert("OK!");
-  // });
 
+
+  $('a.btn-lg').on('mouseup', function () {
+    console.log(navigator.onLine);
+
+    if (navigator.onLine) {
+      location.href = $('a.btn-lg').data('href');
+    } else {
+      alert("Sorry! No internet :-(");
+    }
+  });
 });
 
-},{"./register.js":5}],5:[function(require,module,exports){
+},{"./register.js":6}],6:[function(require,module,exports){
 "use strict";
+
+require("popper.js");
+
+require("bootstrap");
+
+var _package = require("../package.json");
 
 // jQuery, Popper, Bootstrap. Order matters!
 window.$ = window.jQuery = require('jquery');
-
-require('popper.js');
-
-require('bootstrap');
+console.log(_package.version);
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function (err) {
-      return console.log('ServiceWorker registration failed: ', err);
-    });
+    navigator.serviceWorker.register('/service-worker.js?ver=' + _package.version);
   });
 }
 
-},{"bootstrap":1,"jquery":2,"popper.js":3}]},{},[4]);
+},{"../package.json":4,"bootstrap":1,"jquery":2,"popper.js":3}]},{},[5]);

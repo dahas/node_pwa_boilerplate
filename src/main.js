@@ -1,4 +1,4 @@
-require("./register.js")
+import "./register.js";
 
 $(() => {
     // ---- Add your stuff below ----
@@ -16,7 +16,12 @@ $(() => {
 
     /* To avoid making handler global you better 
        attach them like shown below: */
-    // $('#alert').on('mouseup', () => {
-    //     alert("OK!");
-    // });
+    $('a.btn-lg').on('mouseup', () => {
+        console.log(navigator.onLine);
+        if (navigator.onLine) {
+            location.href = $('a.btn-lg').data('href');
+        } else {
+            alert("Sorry! No internet :-(")
+        }
+    });
 });
