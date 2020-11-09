@@ -7,7 +7,7 @@
         "watch": "watchify src/main.js -o public/assets/js/main.js -v",
         "sass": "sass --watch sass/styles.scss:public/assets/css/styles.css",
         "dev": "concurrently --kill-others \"npm run sass\" \"npm run watch\" \"node server\"",
-        "build": "uglifyjs public/assets/js/main.js --compress --mangle --output public/assets/js/main.js",
+        "build": "uglifyjs public/assets/js/main.js --compress --mangle --output public/assets/js/main.js && workbox injectManifest workbox-config.js",
         "start": "node server",
         "deploy": "git push heroku master"
     },

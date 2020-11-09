@@ -17927,16 +17927,7 @@ require("./register.js");
 
 $(function () {
   // ---- Add your stuff below ----
-  console.log("Document is ready!"); // Enable popovers:
-
-  $('[data-toggle="popover"]').popover();
-  /* Inline event handler must be made global 
-     by attaching them to the windows object! */
-
-  window.showAlert = function () {
-    alert("OK!");
-  };
-
+  console.log("Document is ready!");
   $('a.btn-lg').on('mouseup', function (e) {
     if (navigator.onLine) {
       location.href = $(e.currentTarget).data('href');
