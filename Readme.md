@@ -79,6 +79,14 @@ Instead of bootstrap you can install any other css framework that you prefer. If
 
 ### Enable offline usage
 
-The nice thing about a PWA is that you can use it offline like any other native app. But you have to cache all the files you need in a special way. You can do this with a so-called ServiceWorker. You can activate the ServiceWorker in "src/register.js" by uncommenting the relevant code. The ServiceWorker file containing the caching functions is located in the "public" folder.
+The nice thing about a PWA is that you can use it offline like a native app on a mobile device or on the desktop. But to achieve this behaviour you have to cache all the files you need in a special way. You can do this with a so-called ServiceWorker. For the caching strategy we use a tool called "Workbox". 
 
-In this context, it is important that the cache is refreshed when changes are deployed. To make this happen increase the version number in the 'package.json' file on the root level. Finally you have to install the updated ServiceWorker with the developer tools of your web browser. Check out the application tab.
+Since caching can be annoying during the development it should be implemented shorty before the deploy at the earliest. Therefore the ServiceWorker isn´t enabled by default. You have to activate it manually. For this set `enableServiceWorker = true;` in "src/register.js". Then run the following command to generate the public ServiceWorker (public/sw.js) with the precache manifest:
+
+```
+$ workbox injectManifest workbox-config.js
+```
+
+Open the "Application" tab in the developer tools of your browser. There you can check whether the ServiceWorker is running correctly. When you simulate the offline behaviour it can be that some missing resources are displayed in the console. Add those missing resources manually in the `routes` array in the ServiceWorker template (sw-template.js).
+
+IMPORTANT: Whenever you add or remove files of your app or if you have modified the ServiceWorker template you have to update the public ServiceWorker with the above command before the deploy!

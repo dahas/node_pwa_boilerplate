@@ -13,7 +13,7 @@ $(() => {
     window.showAlert = () => {
         alert("OK!")
     }
-    
+
     $('a.btn-lg').on('mouseup', e => {
         if (navigator.onLine) {
             location.href = $(e.currentTarget).data('href');

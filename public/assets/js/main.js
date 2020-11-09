@@ -17921,59 +17921,6 @@ return Popper;
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],4:[function(require,module,exports){
-module.exports={
-    "name": "basic_webserver_boilerplate",
-    "version": "1.0.0",
-    "description": "A basic NodeJS webserver boilerplate",
-    "scripts": {
-        "postinstall": "cd public && npm i",
-        "watch": "watchify src/main.js -o public/assets/js/main.js -v",
-        "sass": "sass --watch sass/styles.scss:public/assets/css/styles.css",
-        "dev": "concurrently --kill-others \"npm run sass\" \"npm run watch\" \"node server\"",
-        "build": "uglifyjs public/assets/js/main.js --compress --mangle --output public/assets/js/main.js",
-        "start": "node server",
-        "deploy": "git push heroku master"
-    },
-    "browserify": {
-        "transform": [
-            [
-                "babelify",
-                {
-                    "presets": [
-                        "@babel/preset-env"
-                    ]
-                }
-            ]
-        ]
-    },
-    "main": "server.js",
-    "dependencies": {
-        "body-parser": "^1.15.0",
-        "bootstrap": "^4.5.3",
-        "browserify": "^17.0.0",
-        "compression": "^1.0.11",
-        "cookie-parser": "^1.4.1",
-        "ejs": "^3.1.5",
-        "express": "^4.13.4",
-        "jquery": "^3.5.1",
-        "longjohn": "^0.2.11",
-        "method-override": "^2.3.5",
-        "morgan": "^1.3.0",
-        "popper.js": "1.16.1-lts",
-        "watchify": "^3.11.1"
-    },
-    "author": "Martin J. Wolf",
-    "license": "THE_YOU_HAVE_TOTAL_FREEDOM_LICENSE",
-    "devDependencies": {
-        "@babel/core": "^7.12.3",
-        "@babel/preset-env": "^7.12.1",
-        "babelify": "^10.0.0",
-        "concurrently": "^5.3.0",
-        "uglify-js": "^3.11.4"
-    }
-}
-
-},{}],5:[function(require,module,exports){
 "use strict";
 
 require("./register.js");
@@ -17999,21 +17946,23 @@ $(function () {
   });
 });
 
-},{"./register.js":6}],6:[function(require,module,exports){
+},{"./register.js":5}],5:[function(require,module,exports){
 "use strict";
-
-var _package = require("../package.json");
 
 require("popper.js");
 
 require("bootstrap");
 
 // jQuery, Popper, Bootstrap. Order matters!
-window.$ = window.jQuery = require('jquery'); // Uncomment the section below to enable the service-worker.
-// if ('serviceWorker' in navigator) {
-//     window.addEventListener('load', () => {
-//         navigator.serviceWorker.register('/service-worker.js?ver=' + appVersion)
-//     });
-// }
+window.$ = window.jQuery = require('jquery');
+var enableServiceWorker = true;
 
-},{"../package.json":4,"bootstrap":1,"jquery":2,"popper.js":3}]},{},[5]);
+if (enableServiceWorker && 'serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').then(function () {
+      return console.log("ServiceWorker registered!");
+    });
+  });
+}
+
+},{"bootstrap":1,"jquery":2,"popper.js":3}]},{},[4]);
