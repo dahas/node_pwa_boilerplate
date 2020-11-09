@@ -9911,6 +9911,11 @@ h3 {
  +----------------------------------------------------------------------*/
 body {
   padding: 2rem;
+  background-color: aliceblue;
+}
+
+.jumbotron {
+  background-color: white;
 }
 
 @media all and (max-width: 480px) {
