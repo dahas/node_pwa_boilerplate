@@ -49,7 +49,7 @@ Enter the following URL in the web browser to launch your project:
 
 <hr>
 
-### Create your own app
+### Create your own app  
 
 ##### HTML
 
