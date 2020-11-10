@@ -81,11 +81,11 @@ Visit [realfavicongenerator.net](https://realfavicongenerator.net). Follow the i
 
 Instead of bootstrap you can install any other css framework that you prefer. If the other framework supports scss as well open styles.scss which you find in the "sass" folder. Replace the 2nd line in the Bootstrap section so it points to the main scss file of the new library. Also remove bootstrap from register.js in "src" folder.
 
-### Enable offline usage
+### Offline first
 
 The nice thing about a PWA is that you can use it offline like a native app on a mobile device or on the desktop. But to achieve this behaviour you have to cache all the files you need in a special way. You can do this with a so-called ServiceWorker. For the caching strategy of our ServiceWorker we use a tool called "Workbox". 
 
-Since caching can be annoying during the development it should be implemented shorty before the deploy at the earliest. Therefore the ServiceWorker isn´t enabled by default. You have to activate it manually. For this set `enableServiceWorker = true;` in "src/register.js". Then run the following command to generate the public ServiceWorker (public/sw.js) with the precache manifest:
+Since caching can be annoying during the development it should be implemented shortly before the deploy at the earliest. Therefore the ServiceWorker is disabled by default. You have to activate it manually. For this set `enableServiceWorker = true;` in "src/register.js". Then run the following command to generate the public ServiceWorker (public/sw.js) with the precache manifest:
 
 ```
 $ workbox injectManifest workbox-config.js

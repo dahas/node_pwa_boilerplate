@@ -4,7 +4,7 @@ import 'popper.js';
 import 'bootstrap';
 import { Workbox } from 'workbox-window';
 
-const enableServiceWorker = false; 
+const enableServiceWorker = true; 
 
 if (enableServiceWorker && 'serviceWorker' in navigator) {
     const wb = new Workbox('sw.js');
@@ -12,7 +12,7 @@ if (enableServiceWorker && 'serviceWorker' in navigator) {
     wb.addEventListener('installed', event => {
         console.log("# ServiceWorker installed:", event)
         if (event.isUpdate) {
-            if (confirm(`New content is available!. Click OK to refresh`)) {
+            if (confirm(`New content is available. Click "OK" to refresh!`)) {
                 window.location.reload();
             }
         }

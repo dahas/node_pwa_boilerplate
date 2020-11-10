@@ -17952,7 +17952,7 @@ var _workboxWindow = require("workbox-window");
 
 // jQuery, Popper, Bootstrap. Order matters!
 window.$ = window.jQuery = require('jquery');
-var enableServiceWorker = false;
+var enableServiceWorker = true;
 
 if (enableServiceWorker && 'serviceWorker' in navigator) {
   var wb = new _workboxWindow.Workbox('sw.js');
@@ -17960,7 +17960,7 @@ if (enableServiceWorker && 'serviceWorker' in navigator) {
     console.log("# ServiceWorker installed:", event);
 
     if (event.isUpdate) {
-      if (confirm("New content is available!. Click OK to refresh")) {
+      if (confirm("New content is available. Click \"OK\" to refresh!")) {
         window.location.reload();
       }
     }
