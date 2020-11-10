@@ -5,7 +5,7 @@ import 'bootstrap';
 
 import { Workbox } from 'workbox-window';
 
-const enableServiceWorker = true;
+const enableServiceWorker = false;
 
 if (enableServiceWorker && 'serviceWorker' in navigator) {
     const wb = new Workbox('sw.js');
