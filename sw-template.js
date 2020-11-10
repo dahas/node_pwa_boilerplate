@@ -6,18 +6,13 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox
 
 // Add resources that aren´t cached automatically here:
 const routes = [
-    { "url": "/" },
     { "url": "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2" },
     { "url": "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2" }
 ];
 
-workbox.setConfig({ debug: true })
+workbox.setConfig({ debug: true });
 
-// Updating SW lifecycle to update the app after user triggered refresh
-workbox.core.skipWaiting()
-workbox.core.clientsClaim()
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
 
-workbox.precaching.precacheAndRoute(routes.concat(self.__WB_MANIFEST), {
-    directoryIndex: null,
-    cleanUrls: false
-});
+workbox.precaching.precacheAndRoute(routes.concat(self.__WB_MANIFEST)); 
