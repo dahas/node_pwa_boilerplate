@@ -91,6 +91,6 @@ Since caching can be annoying during the development it should be implemented sh
 $ workbox injectManifest workbox-config.js
 ```
 
-Open the "Application" tab in the developer tools of your browser. There you can check whether the ServiceWorker is running correctly. When you simulate the offline behaviour it can be that some missing resources are displayed in the console. Add those missing resources manually in the `routes` array in the ServiceWorker template (sw-template.js).
+Open the "Application" tab in the developer tools of your browser. There you can check whether the ServiceWorker is running correctly. When you simulate the offline behaviour it can be that some missing resources are displayed in the console. Add those missing resources manually to `additionalManifestEntries` in "workbox-config.js".
 
 IMPORTANT: Whenever you add, remove or modify files of your app, or if you have modified the ServiceWorker template, you have to update the public ServiceWorker. The update is applied automatically when you execute `$ npm run build`. Otherwise you have to run `$ workbox injectManifest workbox-config.js` again before the deploy.
