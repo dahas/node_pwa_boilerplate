@@ -9914,6 +9914,10 @@ body {
   background-color: aliceblue;
 }
 
+span {
+  background-color: #fae9c3;
+}
+
 .jumbotron {
   background-color: white;
 }

@@ -1,8 +1,8 @@
 ## NodeJS PWA Boilerplate
 
-This boilerplate might be of ones interest who is not in the mood to dive deeper into Angular, Vue, React, Ember a.s.o., and just want to get started with ECMAScript or with native JavaScript as he or she is used to it.
+This boilerplate might be of ones interest who is not in the mood to dive deeper into Angular, Vue, React, Ember a.s.o., and just want to get started with ECMAScript, Vanilla JavaScript or jQuery as he/she/it is used to it.
 
-With this boilerplate you can create a Progressive Web App (PWA) that is based upon NodeJS, the Express framework and the EJS template engine. On the client side you have to deal with jQuery and Bootstrap, which of course you can change. CSS pre-processing is accomplished using a SASS compiler. And a set of free icons is provided by Font Awesome.
+With this boilerplate you can create a Progressive Web App (PWA) that is based upon NodeJS and the Express framework. On the client side you have to deal with jQuery and Bootstrap, which of course you can change. CSS pre-processing is accomplished using a SASS compiler. And a set of free icons is provided by Font Awesome.
 
 ### Requirements
 
@@ -44,7 +44,7 @@ To simply start serving, run this:
 $ npm start
 ```
 
-Enter the following URL in the web browser to launch your project:
+Enter the following URL in the web browser to launch your project:  
 **http://localhost:8000**
 
 <hr>
@@ -53,25 +53,29 @@ Enter the following URL in the web browser to launch your project:
 
 ##### HTML
 
-You find the HTML files in the "views" folder. Don´t let the file extension "ejs" confuse you. If you like to break your layout into pieces, put those pieces in the "partials" subfolder. Markers and partials are parsed with the EJS template engine.
+Put all HTML files directly into the **public** folder. Do not use subfolders.
 
 ##### CSS
 
-Check out the "sass" folder and the scss files named with "_custom". Put your custom styles into these files.
+Check out the **sass** folder and the scss files named with "_custom". Put your custom styles into these files.
 
 ##### JS
 
-The main Javascript file is within the "src" folder. You can write your code and import modules using the ES6 syntax.
+The main Javascript file is within the **src** folder. You write your code there and import modules using the ES6 syntax.
 
 ##### Routing
 
-Routes are configured in app.js using the express framework. 
+Routes are configured in `app.js` using the express framework. 
+
+##### Manifest
+
+In `manifest.json` you set the name of your app.
 
 <hr>
 
-### Create icons and a manifest
+### Create icons
 
-Visit [realfavicongenerator.net](https://realfavicongenerator.net). Follow the instructions and replace the related images in the public folder with those from the zip file. Ignore the included manifest. Change the name of your app in 'manifest.json' which you find in the "public" folder.
+Visit [realfavicongenerator.net](https://realfavicongenerator.net). Follow the instructions and replace the related images in the public folder with those from the zip file. Ignore the included manifest.
 
 ### Use another CSS framework
 
