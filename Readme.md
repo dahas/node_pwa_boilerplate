@@ -1,6 +1,6 @@
 ## NodeJS PWA Boilerplate
 
-This boilerplate might be of ones interest who is not in the mood to dive deeper into Angular, Vue, React, Ember a.s.o., and just want to get started with ECMAScript, Vanilla JavaScript or jQuery as he/she/it is used to it.
+This boilerplate might be of ones interest who is not in the mood to dive deeper into Angular, Vue, React, Ember a.s.o., and just want to get started with ECMAScript, Vanilla JavaScript or jQuery as he or she is used to it.
 
 With this boilerplate you can create a Progressive Web App (PWA) that is based upon NodeJS and the Express framework. On the client side you have to deal with jQuery and Bootstrap, which of course you can change. CSS pre-processing is accomplished using a SASS compiler. And a set of free icons is provided by Font Awesome.
 
