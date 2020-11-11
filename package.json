@@ -4,12 +4,12 @@
     "description": "A basic NodeJS webserver boilerplate",
     "scripts": {
         "postinstall": "cd public && npm i",
-        "watch": "watchify src/main.js -o public/assets/js/main.js -v",
+        "babel": "watchify src/main.js -o public/assets/js/main.js -v",
         "sass": "sass --watch sass/styles.scss:public/assets/css/styles.css",
-        "dev": "concurrently --kill-others \"npm run sass\" \"npm run watch\" \"node server\"",
+        "dev": "concurrently --kill-others \"npm run sass\" \"npm run babel\"",
         "build": "uglifyjs public/assets/js/main.js --compress --mangle --output public/assets/js/main.js && workbox injectManifest workbox-config.js",
-        "start": "node server",
-        "deploy": "git add -A && git commit -m . && git push && git push heroku master"
+        "deploy": "git add -A && git commit -m . && git push && git push heroku master",
+        "start": "node server"
     },
     "browserify": {
         "transform": [

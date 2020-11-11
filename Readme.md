@@ -26,16 +26,18 @@ $ npm i
 
 ### Usage
 
-Run this command when you start working on your project. It enables the SASS watcher and the Babel transpiler:
+When you start creating on your own project you probably want to monitor changes on the client- and on the server-side scripts simultaniously. Therefore split your console into two and run the following commands each in one instance:
 
 ```
-$ npm run dev
+$ npm run dev // Console 1
+$ nodemon server // Console 2
 ```
 
-Before you deploy your stuff to a hosting provider run the following command. It compresses your JavaScript code and creates/updates the ServiceWorker:
+Before you deploy your stuff run the build command. It compresses your JavaScript code and creates/updates the ServiceWorker. With deploy you push everything to your Git repository and to your hosting provider afterwards:
 
 ```
 $ npm run build
+$ npm run deploy // Deploys to Heroku (Customize it to suit your needs in package.json)
 ```
 
 To simply start serving, run this:
