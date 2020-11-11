@@ -10906,7 +10906,7 @@ var _workboxWindow = require("workbox-window");
 window.$ = window.jQuery = require('jquery'); // import 'popper.js';
 // import 'bootstrap';
 
-var enableServiceWorker = true;
+var enableServiceWorker = false;
 
 if (enableServiceWorker && 'serviceWorker' in navigator) {
   var wb = new _workboxWindow.Workbox('sw.js');
