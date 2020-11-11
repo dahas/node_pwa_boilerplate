@@ -81,7 +81,7 @@ Visit [realfavicongenerator.net](https://realfavicongenerator.net). Follow the i
 
 ### Use another CSS framework
 
-Instead of bootstrap you can install any other css framework that you prefer. If the other framework supports scss as well open and edit styles.scss which you find in the "sass" folder. Replace the bootstrap entry so it points to the main scss file of the new library. Also remove bootstrap.js or replace it with the new one in "src/register.js".
+Instead of MaterializeCSS you can install any other css framework that you prefer. If the other framework supports scss as well open and edit styles.scss which you find in the "sass" folder. Replace the MaterializeCSS entry so it points to the main scss file of the new library. Also import the JS file if it is a module in "src/register.js".
 
 ### Offline first
 
