@@ -1,10 +1,10 @@
 // jQuery, Popper, Bootstrap. Order matters!
 window.$ = window.jQuery = require('jquery');
-import 'popper.js';
-import 'bootstrap';
+// import 'popper.js';
+// import 'bootstrap';
 import { Workbox } from 'workbox-window';
 
-const enableServiceWorker = false; 
+const enableServiceWorker = true; 
 
 if (enableServiceWorker && 'serviceWorker' in navigator) {
     const wb = new Workbox('sw.js');

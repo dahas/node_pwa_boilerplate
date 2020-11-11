@@ -6,15 +6,16 @@
 
 // Bootstrap
 @import "customVariables"; // 1st
-@import "../node_modules/bootstrap/scss/bootstrap";  // 2nd
+@import "../node_modules/materialize-css/sass/materialize";  // 2nd
+// @import "../node_modules/bootstrap/scss/bootstrap";  // 2nd 
 @import "customMixins"; // 3rd
 @import "customStyles"; // 4th
 
 // Font-Awesome
-@import "../public/node_modules/@fortawesome/fontawesome-free/scss/brands";
-@import "../public/node_modules/@fortawesome/fontawesome-free/scss/regular";
-@import "../public/node_modules/@fortawesome/fontawesome-free/scss/solid";
-@import "../public/node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+// @import "../public/node_modules/@fortawesome/fontawesome-free/scss/brands";
+// @import "../public/node_modules/@fortawesome/fontawesome-free/scss/regular";
+// @import "../public/node_modules/@fortawesome/fontawesome-free/scss/solid";
+// @import "../public/node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 
 // Fonts
 @import "customFonts";

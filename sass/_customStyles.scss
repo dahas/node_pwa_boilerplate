@@ -2,22 +2,15 @@
  |    ADD YOUR STYLES HERE                                              |
  +----------------------------------------------------------------------*/
 
-body {
-    padding: 2rem;
-    background-color: aliceblue;
-}
+ .learn-more {
+     text-transform: uppercase;
+     padding: 5px 0 0 30px;
+ }
 
-span {
-    background-color: rgb(250, 233, 195);
-}
+ span.logo {
+     cursor: pointer;
+ }
 
-.jumbotron {
-    background-color: white;
-}
-
-@media all and (max-width: 480px) {
-    .btn-block-xs {
-        width: 100%;
-        display: block;
-    }
+div.row .col {
+    padding: 10px;
 }

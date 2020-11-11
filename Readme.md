@@ -2,7 +2,7 @@
 
 This boilerplate might be of ones interest who is not in the mood to dive deeper into Angular, Vue, React, Ember a.s.o., and just want to get started with ECMAScript, Vanilla JavaScript or jQuery as he or she is used to it.
 
-With this boilerplate you can create a Progressive Web App (PWA) that is based upon NodeJS and the Express framework. On the client side you have to deal with jQuery and Bootstrap, which of course you can change. CSS pre-processing is accomplished using a SASS compiler. And a set of free icons is provided by Font Awesome.
+With this boilerplate you can create a Progressive Web App (PWA) that is based upon NodeJS and the Express framework. On the client side you have to deal with jQuery and MaterializeCSS, which of course you can change. CSS pre-processing is accomplished using a SASS compiler. And for the app-alike offline experience responsible is a tool called Workb
 
 ### Requirements
 
@@ -81,7 +81,7 @@ Visit [realfavicongenerator.net](https://realfavicongenerator.net). Follow the i
 
 ### Use another CSS framework
 
-Instead of bootstrap you can install any other css framework that you prefer. If the other framework supports scss as well open styles.scss which you find in the "sass" folder. Replace the 2nd line in the Bootstrap section so it points to the main scss file of the new library. Also remove bootstrap from register.js in "src" folder.
+Instead of bootstrap you can install any other css framework that you prefer. If the other framework supports scss as well open and edit styles.scss which you find in the "sass" folder. Replace the bootstrap entry so it points to the main scss file of the new library. Also remove bootstrap.js or replace it with the new one in "src/register.js".
 
 ### Offline first
 

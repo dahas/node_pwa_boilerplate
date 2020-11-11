@@ -5,13 +5,7 @@ module.exports = {
   ],
   "swDest": "public/sw.js",
   "swSrc": "sw-template.js",
-  "additionalManifestEntries": [{
-    "revision": rndStr(),
-    "url": "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"
-  }, {
-    "revision": rndStr(),
-    "url": "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"
-  }]
+  "additionalManifestEntries": []
 };
 
 function rndStr() {
