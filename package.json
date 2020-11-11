@@ -9,7 +9,7 @@
         "dev": "concurrently --kill-others \"npm run sass\" \"npm run babel\"",
         "build": "uglifyjs public/assets/js/main.js --compress --mangle --output public/assets/js/main.js && npm run sw-update",
         "push": "git add -A && git commit -m . && git push",
-        "deploy": "npm run push ; git push heroku master",
+        "deploy": "npm run push && git push heroku master",
         "start": "node server"
     },
     "browserify": {
