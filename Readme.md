@@ -26,7 +26,7 @@ $ npm i
 
 ### Usage
 
-When you start creating on your own project you probably want to monitor changes on the client- and on the server-side scripts simultaniously. Therefore split your console into two and run the following commands each in one instance:
+When you start creating your own project you probably want to monitor changes on the client- and on the server-side scripts simultaniously. Therefore split your console into two and run the following commands each in one instance:
 
 ```
 $ npm run dev // Console 1
@@ -85,15 +85,15 @@ Instead of MaterializeCSS you can install any other css framework that you prefe
 
 ### Offline first
 
-The nice thing about a PWA is that you can use it offline like a native app on a mobile device or on the desktop. But to achieve this behaviour you have to cache all the files you need in a special way. You can do this with a so-called ServiceWorker.
+The nice thing about a PWA is that you can use it offline like a native app on a mobile device or on the desktop. But to achieve this behaviour you have to cache all the required files in a special way. You can do this with a so-called ServiceWorker.
 
-Since caching can be annoying during the development it should be implemented at the earliest shortly before the deploy. Therefore the ServiceWorker is disabled by default. You have to activate it manually: set `enableServiceWorker = true;` in "src/register.js". Then run the following command to generate the public ServiceWorker (public/sw.js) with the latest precache manifest:
+Since caching can be annoying during the development process I highly recommend to activate it at the earliest shortly before the deploy. Therefore the ServiceWorker is disabled by default. You have to activate it manually: set `enableServiceWorker = true;` in "src/register.js". Then run the following command to generate the public ServiceWorker (public/sw.js) with the latest precache manifest:
 
 ```
-$ workbox injectManifest workbox-config.js
+$ npm run sw-update
 ```
 
-Open the "Application" tab in the developer tools of your browser. There you can check whether the ServiceWorker is running correctly. When you simulate the offline behaviour it can be that some missing resources are displayed in the console. Add those missing resources manually to the array `additionalManifestEntries` in "workbox-config.js":
+Open the "Application" tab in the developer tools of your browser. There you can check whether the ServiceWorker is running correctly. In rare cases Workbox may not recognize all of the files to be cached. When that happens, manually add the paths to the array `additionalManifestEntries` in "workbox-config.js":
 
 ```
 "additionalManifestEntries": [
