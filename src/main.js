@@ -9,7 +9,7 @@ $(() => {
     $(".dropdown-trigger").dropdown();
     $('.fixed-action-btn').floatingActionButton();
 
-    $('a.logo').on('mouseup', e => {
+    $('span.logo').on('mouseup', e => {
         if (navigator.onLine) {
             location.href = $(e.currentTarget).data('href');
         } else {
