@@ -28,7 +28,7 @@ function pwaInstallButton() {
             e.preventDefault();
             deferredPrompt = e;
             $('.fixed-action-btn').show();
-            $('.fixed-action-btn').on('click', () => {
+            $('.fixed-action-btn').on('click touchstart', () => {
                 $('.fixed-action-btn').hide();
                 deferredPrompt.prompt();
                 deferredPrompt.userChoice.then((choiceResult) => {

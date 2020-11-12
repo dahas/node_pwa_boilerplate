@@ -93,7 +93,7 @@ Since caching can be annoying during the development process I highly recommend 
 $ npm run sw-update
 ```
 
-Open the "Application" tab in the developer tools of your browser. There you can check whether the ServiceWorker is running correctly. In rare cases Workbox may not recognize all of the files to be cached automatically. When that happens, manually add the paths to the array `additionalManifestEntries` in "workbox-config.js":
+Open the "Application" tab in the developer tools of your browser. There you can check whether the ServiceWorker is running correctly. In rare cases Workbox may not recognize all of the files to be cached automatically. When that happens, manually add these files to the array `additionalManifestEntries` in "workbox-config.js":
 
 ```
 "additionalManifestEntries": [
