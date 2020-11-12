@@ -1,7 +1,7 @@
 window.$ = window.jQuery = require('jquery');
 import { Workbox } from 'workbox-window';
 
-const enableServiceWorker = false;
+const enableServiceWorker = true;
 
 $(() => {
 
