@@ -28,13 +28,13 @@ $(() => {
 function pwaInstallButton() {
     if (enableServiceWorker && 'serviceWorker' in navigator) {
         window.addEventListener('beforeinstallprompt', e => {
-            e.preventDefault();
             deferredPrompt = e;
+            e.preventDefault();
             $('.fixed-action-btn').show();
             $('.fixed-action-btn').on(isTouchDevice() ? 'touchstart' : 'click', () => {
                 $('.fixed-action-btn').hide();
                 deferredPrompt.prompt();
-                deferredPrompt.userChoice.then((choiceResult) => {
+                deferredPrompt.userChoice.then(choiceResult => {
                     if (choiceResult.outcome === 'accepted') {
                         console.log('User accepted the A2HS prompt');
                     } else {
