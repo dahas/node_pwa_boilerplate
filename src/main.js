@@ -1,4 +1,6 @@
-import { enableServiceWorker, deferredPrompt } from "./register.js";
+import { enableServiceWorker } from "./register.js";
+
+let deferredPrompt;
 
 $(() => {
     // ---- Add your stuff below ----
