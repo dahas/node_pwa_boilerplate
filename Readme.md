@@ -82,13 +82,13 @@ Visit [realfavicongenerator.net](https://realfavicongenerator.net). Follow the i
 
 ### Use another CSS framework
 
-Instead of MaterializeCSS you can install any other css framework that you prefer. If the other framework supports scss as well open and edit styles.scss which you find in the "sass" folder. Replace the MaterializeCSS entry so it points to the main scss file of the new library. Also import the JS file if it is a module in "src/register.js".
+Instead of MaterializeCSS you can install any other css framework that you prefer. If the other framework supports scss as well open and edit styles.scss which you find in the "sass" folder. Replace the MaterializeCSS entry so it points to the main scss file of the new library.
 
 ### Offline first
 
 The nice thing about a PWA is that you can use it offline like a native app on a mobile device or on the desktop. But to achieve this behaviour you have to cache all the required files in a special way. You can do this with a so-called ServiceWorker.
 
-Since caching can be annoying during the development process I highly recommend to activate it at the earliest shortly before the deploy. Therefore the ServiceWorker is disabled by default. You have to activate it manually: set `enableServiceWorker = true;` in "src/register.js". Then run the following command to generate the public ServiceWorker (public/sw.js) with the latest precache manifest:
+Since caching can be annoying during the development process I highly recommend to activate it at the earliest shortly before the deploy. Therefore the ServiceWorker is disabled by default. You have to activate it manually: set `enableServiceWorker = true;` in "src/main.js". Then run the following command to generate the public ServiceWorker (public/sw.js) with the latest precache manifest:
 
 ```
 $ npm run sw-update

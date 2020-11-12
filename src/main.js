@@ -1,7 +1,7 @@
-import "./register.js";
+window.$ = window.jQuery = require('jquery');
 import { Workbox } from 'workbox-window';
 
-const enableServiceWorker = true;
+const enableServiceWorker = false;
 
 $(() => {
 
