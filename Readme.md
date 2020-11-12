@@ -2,15 +2,16 @@
 
 This boilerplate might be of ones interest who is not in the mood to dive deeper into Angular, Vue, React, Ember a.s.o., and just want to get started with ECMAScript, Vanilla JavaScript or jQuery as he or she is used to it.
 
-With this boilerplate you can create a **Progressive Web App** (PWA) that is based upon NodeJS and the Express framework. On the client side you have to deal with jQuery and MaterializeCSS, which of course you can change. CSS pre-processing is accomplished using a SASS compiler. And for the app-alike offline experience responsible is a tool called Workbox.
+With this boilerplate you can create a **Progressive Web App** (PWA) that is based upon NodeJS and the Express framework. On the client side you have to deal with jQuery and MaterializeCSS, which of course you can change. CSS pre-processing is accomplished using a SASS compiler. And responsible for the app-alike offline experience is a tool called Workbox.
 
 ### Requirements
 
-Clone the resources into an empty folder:
+Download the resources from the repository into an empty folder:
 ```
 $ mkdir your_project_folder
 $ cd your_project_folder
-$ git clone https://github.com/dahas/node_pwa_boilerplate.git .
+$ git init
+$ git pull https://github.com/dahas/node_pwa_boilerplate.git
 ```
 
 Install SASS support globally:

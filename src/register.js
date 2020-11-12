@@ -4,7 +4,7 @@ window.$ = window.jQuery = require('jquery');
 // import 'bootstrap';
 import { Workbox } from 'workbox-window';
 
-export const enableServiceWorker = true;
+const enableServiceWorker = true;
 
 // ---- Register ServiceWorker ----
 if (enableServiceWorker && 'serviceWorker' in navigator) {
