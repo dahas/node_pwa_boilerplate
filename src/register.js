@@ -6,6 +6,8 @@ import { Workbox } from 'workbox-window';
 
 export const enableServiceWorker = true;
 
+export let deferredPrompt;
+
 // ---- Register ServiceWorker ----
 if (enableServiceWorker && 'serviceWorker' in navigator) {
     const wb = new Workbox('sw.js');

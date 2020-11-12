@@ -1,4 +1,4 @@
-import { enableServiceWorker } from "./register.js";
+import { enableServiceWorker, deferredPrompt } from "./register.js";
 
 $(() => {
     // ---- Add your stuff below ----
@@ -25,7 +25,6 @@ $(() => {
 
 function pwaInstallButton() {
     if (enableServiceWorker && 'serviceWorker' in navigator) {
-        let deferredPrompt;
         window.addEventListener('beforeinstallprompt', e => {
             e.preventDefault();
             deferredPrompt = e;
