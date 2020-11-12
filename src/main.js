@@ -21,6 +21,8 @@ $(() => {
     pwaInstallButton();
 });
 
+// ---- HELPER ----
+
 function pwaInstallButton() {
     if (enableServiceWorker && 'serviceWorker' in navigator) {
         let deferredPrompt;
@@ -28,7 +30,7 @@ function pwaInstallButton() {
             e.preventDefault();
             deferredPrompt = e;
             $('.fixed-action-btn').show();
-            $('.fixed-action-btn').on('click touchstart', () => {
+            $('.fixed-action-btn').on(isTouchDevice() ? 'touchstart' : 'click', () => {
                 $('.fixed-action-btn').hide();
                 deferredPrompt.prompt();
                 deferredPrompt.userChoice.then((choiceResult) => {
@@ -42,4 +44,8 @@ function pwaInstallButton() {
             });
         });
     }
+}
+
+function isTouchDevice() {
+    return "ontouchstart" in document.documentElement;
 }
