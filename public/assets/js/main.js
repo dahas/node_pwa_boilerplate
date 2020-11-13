@@ -10884,13 +10884,14 @@ var _workboxWindow = require("workbox-window");
 window.$ = window.jQuery = require('jquery');
 var enableServiceWorker = false;
 $(function () {
-  // ---- Add your stuff below ----
-  console.log("Document is ready!"); // Register MaterializeCSS components:
+  // ---- Add your stuff below ---- //
+  console.log("Document is ready!"); // MaterializeCSS components: 
 
   $('.sidenav').sidenav();
   $(".dropdown-trigger").dropdown();
   $('.fixed-action-btn').floatingActionButton();
-  $('.modal').modal();
+  $('.modal').modal(); // Checking Online/Offline:
+
   $('span.logo').on('mouseup', function (e) {
     if (navigator.onLine) {
       location.href = $(e.currentTarget).data('href');
@@ -10899,14 +10900,14 @@ $(function () {
         html: 'Sorry! No internet :-('
       });
     }
-  }); // ---- Add your stuff above ----
+  }); // ---- Add your stuff above ---- //
 
   var confirmReload = M.Modal.getInstance($('#reload'));
   $("#reload-page").on('click', function () {
     location.href = location.href;
   });
   registerServiceWorker(confirmReload);
-}); // ---- HELPER ----
+}); // ---- HELPER ---- //
 
 function isTouchDevice() {
   return "ontouchstart" in document.documentElement;

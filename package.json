@@ -3,10 +3,11 @@
     "version": "1.0.0",
     "description": "A basic NodeJS webserver boilerplate",
     "scripts": {
+        "monitor": "nodemon server --ignore src/ --ignore public/",
         "babel": "watchify src/main.js -o public/assets/js/main.js -v",
         "sass": "sass --watch sass/styles.scss:public/assets/css/styles.css",
         "sw-update": "workbox injectManifest workbox-config.js",
-        "dev": "concurrently --kill-others \"npm run sass\" \"npm run babel\"",
+        "dev": "concurrently --kill-others \"npm run sass\" \"npm run babel\" \"npm run monitor\"",
         "build": "uglifyjs public/assets/js/main.js --compress --mangle --output public/assets/js/main.js && npm run sw-update",
         "push": "git add -A && git commit -m . && git push",
         "deploy": "npm run push && git push heroku master",

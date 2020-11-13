@@ -5,16 +5,17 @@ const enableServiceWorker = false;
 
 $(() => {
 
-    // ---- Add your stuff below ----
+    // ---- Add your stuff below ---- //
 
     console.log("Document is ready!");
 
-    // Register MaterializeCSS components:
+    // MaterializeCSS components: 
     $('.sidenav').sidenav();
     $(".dropdown-trigger").dropdown();
     $('.fixed-action-btn').floatingActionButton();
     $('.modal').modal();
 
+    // Checking Online/Offline:
     $('span.logo').on('mouseup', e => {
         if (navigator.onLine) {
             location.href = $(e.currentTarget).data('href');
@@ -23,7 +24,7 @@ $(() => {
         }
     });
 
-    // ---- Add your stuff above ----
+    // ---- Add your stuff above ---- //
 
     const confirmReload = M.Modal.getInstance($('#reload'));
 
@@ -34,7 +35,7 @@ $(() => {
     registerServiceWorker(confirmReload);
 });
 
-// ---- HELPER ----
+// ---- HELPER ---- //
 
 function isTouchDevice() {
     return "ontouchstart" in document.documentElement;

@@ -2,9 +2,13 @@
 
 This boilerplate might be of ones interest who is not in the mood to dive deeper into Angular, Vue, React, Ember a.s.o., and just want to get started with ECMAScript, Vanilla JavaScript or jQuery as he or she is used to it.
 
-With this boilerplate you can create a **Progressive Web App** (PWA) that is based upon NodeJS and the Express framework. On the client side you have to deal with jQuery and MaterializeCSS, which of course you can change. CSS pre-processing is accomplished using a SASS compiler. And responsible for the app-alike offline experience is a tool called Workbox.
+With this boilerplate you can create a **Progressive Web App (PWA)** that is based upon NodeJS and the Express framework. On the client side you have to deal with jQuery and MaterializeCSS, which of course you can change. CSS pre-processing is accomplished using a SASS compiler. And responsible for the app-alike offline experience is a tool called Workbox.
 
 ### Requirements
+
+If you haven´t yet, download the latest stable version of NodeJS from [here](https://nodejs.org)
+
+### Installation
 
 Download the resources from the repository into an empty folder:
 ```
@@ -27,26 +31,27 @@ $ npm i
 
 ### Usage
 
-When you start creating your own project you probably want to monitor changes on the client- and on the server-side scripts simultaniously. Therefore split your console into two and run the following commands each in one instance:
-
+##### Development
+Run the following command during the development of your project:
 ```
-$ npm run dev // Console 1
-$ nodemon server // Console 2
+$ npm run dev
 ```
 
-Before you deploy your stuff run the build command. It compresses your JavaScript code and creates/updates the ServiceWorker. With deploy you push everything to your Git repository and to your hosting provider afterwards:
+##### Build
+Before you deploy your stuff run the "build" command so the JavaScript code gets compressed and the ServiceWorker gets an update:
 
 ```
 $ npm run build
-$ npm run deploy // Deploys to Heroku (Customize it to suit your needs in package.json)
 ```
 
-To simply start serving, run this:
+##### Deploy
+To push everything to your Git repository and to deploy your project to a hosting provider with one command you first have to add the remote URL to your local repository. Afterwards you can run this command:
 
 ```
-$ npm start
+$ npm run deploy // Pushes to Heroku (Change it in package.json)
 ```
 
+##### Launch
 Enter the following URL in the web browser to launch your project:  
 **http://localhost:8000**
 
