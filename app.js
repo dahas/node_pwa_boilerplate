@@ -3,7 +3,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var app = express();
-app.use(express.static(path.join(__dirname, 'public')));
+const root = path.join(__dirname, 'public')
+app.use(express.static(root));
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -12,7 +13,11 @@ app.use(bodyParser.urlencoded({
 // ---- Set your routes below ----
 
 app.get('/', function (req, res) {
-    res.sendFile('index.html');
+    res.sendFile('index.html', { root: root});
+});
+
+app.get('/sub', function (req, res) {
+    res.sendFile('sub.html', { root: root});
 });
 
 module.exports = app;
